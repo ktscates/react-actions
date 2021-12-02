@@ -18,7 +18,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [12.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -44,7 +44,8 @@ jobs:
       # uses: jsmrcaga/action-netlify-deploy@v1.7.1
 
       env:
+        url: https://ktscates.github.io/react-actions
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-      run: netlify deploy --dir-build --prod
+      run: netlify deploy --dir-public --prod
  
