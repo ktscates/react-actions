@@ -43,9 +43,11 @@ jobs:
     - name: Netlify Deploy
       # uses: jsmrcaga/action-netlify-deploy@v1.7.1
 
-      env:
+      with:
         url: https://ktscates.github.io/react-actions
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        NETLIFY_DEPLOY_MESSAGE: "Prod deploy v${{ github.ref }}"
+        NETLIFY_DEPLOY_TO_PROD: true
       run: netlify deploy --build --prod
  
