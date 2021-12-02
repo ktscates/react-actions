@@ -42,6 +42,5 @@ jobs:
       
     - name: Netlify Deploy
       uses: jsmrcaga/action-netlify-deploy@v1.7.1
-
-      with:
-        run: netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
+      
+      run: netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
