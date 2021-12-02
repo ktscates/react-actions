@@ -41,7 +41,7 @@ jobs:
       uses: codecov/codecov-action@v2.1.0
       
     - name: Netlify Deploy
-      # uses: jsmrcaga/action-netlify-deploy@v1.7.1
+      uses: jsmrcaga/action-netlify-deploy@v1.7.1
 
       with:
         url: https://ktscates.github.io/react-actions
